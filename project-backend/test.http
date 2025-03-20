@@ -1,0 +1,44 @@
+### This is a comment
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{ "username": "newuser", "password": "password" }
+
+### A second example, each request should be delimited by a triple hash
+GET http://localhost:3000/api/images
+
+### Test Case 1: Successful registration
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "newuser",
+    "password": "password"
+}
+### Test Case 2: Missing password
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "newuser"
+}
+
+### Test Case 5: Username already taken
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username": "newuser",
+    "password": "password"
+}
+### Test Case 6: Incorrect password (Should return valid: false)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "wrongpassword"
+}
+
+GET http://localhost:3000/api/images
+Authorization: Bearer <token string from login endpoint>
