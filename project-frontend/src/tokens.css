@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://use.typekit.net/cvi3qyb.css");
+
+:root {
+    /* Color tokens */
+    --color-primary: black;
+    --color-secondary: white;
+    --color-footer-background: black;
+    --color-footer-text: white;
+    --color-background: white;
+    --color-text: black;
+    --color-button: black;
+    --color-button-text: white;
+
+    /* Spacing tokens */
+    --spacing-small: 1em;
+    --spacing-medium: 2em;
+    --spacing-large: 4em;
+  
+    /* Typography tokens */
+    --font-family-primary: "Inter", sans-serif;
+    --font-family-heading: "bebas-neue", sans-serif;
+    --font-size-large: 4em;
+    --font-size-medium: 1em;
+    --font-size-small: 0.9em;
+  
+    /* Layout tokens */
+    --grid-gap: 1em;
+    --grid-padding: 2em;
+    --grid-columns: 3;
+    --product-card-border: #ddd;
+  }
+
+  body.dark-mode {
+    --color-background-header: #101070;
+    --color-footer-background: white;
+    --color-footer-text: black;
+    --color-background: #141414;
+    --color-text: white;
+    --color-link: #ffa576;
+    --color-border: var(--color-link);
+    --color-button: lightgrey;
+    --color-button-text: black;
+  }
